@@ -5,7 +5,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 const photos = [
   "/watercolor-embrace-of-love.png",
   "/watercolour-romance.png",
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuAB1vda8sCKHLckuiIiQHqjs9q2GBuAcDDzxm5ANofm_63s_vUNhHoSXjmRkswWMMqc_peC6eMz2LZMNtxokpUvofiRbo0HDx-vJgYlvrkjf6zimG4ONo_VSY0speXUHxI-u7pKQ1mKhD3n6xZN6vWei1zk_TKqKYpseCm68F4XiJyJfISElxDJ7FOZXGmIw1oqis6olUmLjndV7yZ8ikaGYx7KUguNAni3CS19Oy1d",
+  "/dreamy-watercolour-couple-portrait.png",
 ];
 
 function Petals() {
