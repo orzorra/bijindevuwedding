@@ -2,10 +2,13 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+const asset = (path: string) => `${basePath}${path}`;
+
 const photos = [
-  "/watercolor-embrace-of-love.png",
-  "/watercolour-romance.png",
-  "/dreamy-watercolour-couple-portrait.png",
+  asset("/watercolor-embrace-of-love.png"),
+  asset("/watercolour-romance.png"),
+  asset("/dreamy-watercolour-couple-portrait.png"),
 ];
 
 function Petals() {
@@ -13,7 +16,7 @@ function Petals() {
     left: i % 2 === 0 ? `${(i * 11) % 20}%` : `${80 + ((i * 13) % 20)}%`, delay: `${-((i * 2.7) % 18)}s`, duration: `${10 + (i % 8)}s`, sway: i % 2 ? -1 : 1,
     color: ["#e28d95", "#c95964", "#f4b8be", "#e9c176", "#7d957e"][i % 5], size: `${18 + (i % 5) * 4}px`,
   })), []);
-  return <><div className="petals" aria-hidden="true">{petals.map((p, i) => <span key={i} className={`petal petal-${i % 4}`} style={{ left: p.left, animationDelay: p.delay, animationDuration: p.duration, ["--sway" as string]: `${p.sway * (10 + i % 4 * 7)}px`, width: p.size, height: `calc(${p.size} * 1.2)` }} />)}</div><WelcomeOverlay /></>;
+  return <><div className="petals" aria-hidden="true">{petals.map((p, i) => <span key={i} className={`petal petal-${i % 4}`} style={{ left: p.left, animationDelay: p.delay, animationDuration: p.duration, ["--sway" as string]: `${p.sway * (10 + i % 4 * 7)}px`, ["--petal-sprite" as string]: `url(${asset("/petals/rose-petal-sprite.png")})`, width: p.size, height: `calc(${p.size} * 1.2)` }} />)}</div><WelcomeOverlay /></>;
 }
 
 function WelcomeOverlay() {
@@ -57,7 +60,7 @@ export default function Home() {
   };
   const share = async () => { try { if (navigator.share) await navigator.share({ title: "Bijin & Devu — The Wedding Celebration", text: "Join us on 07 February 2027.", url: location.href }); else { await navigator.clipboard.writeText(location.href); setToast("Invitation link copied"); setTimeout(() => setToast(""), 2500); } } catch {} };
   const calendar = () => { const url = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding%3A%20Bijin%20%26%20Devu&dates=20270207T063000Z%2F20270207T123000Z&location=Mannam%20Smaraka%20Mandiram%2C%20Kerala"; window.open(url, "_blank", "noopener,noreferrer"); };
-  return <><audio ref={audioRef} src="/bangalore-days-bgm-malayalam.mp3" loop preload="metadata" autoPlay onPlay={() => setMusic(true)} /><Petals /><header><div className="nav"><a className="monogram" href="#top">B<span>&amp;</span>D</a><nav className="nav-links" aria-label="Main navigation"><a className="active" href="#top">Home</a><a href="#story">Our Story</a><a href="#venues">Events</a><a href="#details">Details</a></nav><a className="brand" href="#top">Bijin &amp; Devu<small>Auspicious Union</small></a><button className="music" onClick={toggleMusic} aria-label={music ? "Pause music" : "Play music"}><i className={music ? "playing" : ""}>▮▮▮</i> <span>{music ? "Pause" : "Music"}</span></button></div></header><main id="top">
+  return <><audio ref={audioRef} src={asset("/bangalore-days-bgm-malayalam.mp3")} loop preload="metadata" autoPlay onPlay={() => setMusic(true)} /><Petals /><header><div className="nav"><a className="monogram" href="#top">B<span>&amp;</span>D</a><nav className="nav-links" aria-label="Main navigation"><a className="active" href="#top">Home</a><a href="#story">Our Story</a><a href="#venues">Events</a><a href="#details">Details</a></nav><a className="brand" href="#top">Bijin &amp; Devu<small>Auspicious Union</small></a><button className="music" onClick={toggleMusic} aria-label={music ? "Pause music" : "Play music"}><i className={music ? "playing" : ""}>▮▮▮</i> <span>{music ? "Pause" : "Music"}</span></button></div></header><main id="top">
     <section className="hero"><div className="hero-card"><div className="hero-floral" aria-hidden="true"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDhuZt2RBvsXwedQ-sw9xcRj_W9ek67otv7QH5mdK8qRggo59quLJp0QqC7o8UT6MuBy0fTBDZNyGQRwgPV2JZJOBPk5BA2mxxCHOReuygN6Cq-TI7jnJ88ubTRtJh6L1SsB0ZKR0B7OLXUbv49-vrayhAhpxew-bB3LqtWjmpre2x1SIA57dws8e8zfISYGl8zlMrKaMcDoD-9ErExueBYPiZAhVr_orosUWcygDWv_cR4eyKvDFD8g" /><div /></div><div className="ornament" /><div className="hero-content"><p className="eyebrow">श्री | ഓം നമശിവായ</p><p className="kicker">Bespoke Ceremonial Union</p><p className="intro">Together with their families and with the boundless blessings of God, joyfully invite you to celebrate the marriage of</p><h1>Bijin <em>&amp;</em> Devu</h1><div className="rule">∞</div><div className="date">07 February 2027 <b>•</b> Sunday <b>•</b> Kerala, India</div><div className="actions"><a href="#details">View Muhurtham Details</a><a className="light" href="#venues">Ceremony Venues</a></div></div></div><span className="scroll">Scroll to Explore ↓</span></section>
     <section className="section soft story-section" id="story"><div className="section-head"><p className="eyebrow">Divine Confluence</p><h2>Our Story</h2><p className="section-lead">A journey that began with friendship, grew with understanding, and continues into a lifelong commitment.</p><div className="rule">∞</div></div><div className="profiles"><Profile title="The Groom" name="Bijin B" parent="Sri Biju & Smt Ajitha Kumari K.C." text="Known for his quiet grace, radiant heart, and devotion to timeless values and familial warmth." img={photos[0]} /><Profile title="The Bride" name="Devu Sunil" parent="Sri Sunil & Smt Kala" text="Admired for her infectious vivacity, gentle kindness, artistic spirit, and thoughtful elegance." img={photos[1]} /></div></section>
     <section className="section" id="details"><div className="section-head"><p className="eyebrow">Sacred Timeline &amp; Celebration</p><h2>Auspicious Countdown</h2><div className="rule">∞</div></div><div className="countdown-card"><p className="eyebrow">Auspicious Moment</p><div className="date-display" aria-label="Wedding date: February 7, 2027"><strong>07</strong><span><b>FEBRUARY</b><small>2027</small></span></div><h2>Our Wedding</h2><p>12:00 PM IST at Mannam Smaraka Mandiram, Kerala</p><Countdown /><div className="gallery">{photos.map((photo, i) => <img src={photo} alt="Wedding detail" key={i} />)}</div><p className="quote">“Two souls, one sacred path blessed by time and tradition”</p></div></section>

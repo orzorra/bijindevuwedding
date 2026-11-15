@@ -6,7 +6,10 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   output: "export",
   trailingSlash: true,
-  basePath: isGitHubPages ? "/bijinwedding" : undefined,
-  assetPrefix: isGitHubPages ? "/bijinwedding/" : undefined,
+  basePath: isGitHubPages ? "/bijindevuwedding" : undefined,
+  assetPrefix: isGitHubPages ? "/bijindevuwedding/" : undefined,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: isGitHubPages ? "/bijindevuwedding" : "",
+  },
 };
 export default nextConfig;
