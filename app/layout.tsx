@@ -8,7 +8,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://bijindevuwedding.online"),
+  metadataBase: new URL("https://www.bijindevuwedding.online"),
   title: "Bijin & Devu — The Wedding Celebration",
   description: "Auspiciously invited to celebrate the wedding of Bijin and Devu.",
   openGraph: {
