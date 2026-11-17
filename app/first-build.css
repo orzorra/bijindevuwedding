@@ -2351,3 +2351,5 @@ footer strong {
 .gpay-pill{color:#1769e0}.upi-pill{color:#6b3fa0}.phonepe-pill{color:#5f259f}
 .g-mark{color:#4285f4;background:#f1f5ff}.upi-mark{color:#6b3fa0;background:#f1eaff;font-size:9px}.phonepe-mark{color:#fff;background:#5f259f}
 @media(max-width:720px){.gifts-section{padding:20px 18px 70px}.gift-card{grid-template-columns:1fr;gap:26px;padding:34px 28px;text-align:center}.gift-card p:not(.eyebrow){margin-left:auto;margin-right:auto}.upi-card{width:220px;margin:auto}}
+
+.rsvp-submit-icon{display:inline-block;width:13px;height:13px;margin-left:10px;vertical-align:-2px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
