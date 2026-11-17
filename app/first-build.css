@@ -2320,9 +2320,34 @@ footer strong {
 .rsvp-form select option{background:#211c18;color:#f1e7dc}
 .rsvp-form textarea{resize:vertical}
 .rsvp-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
-.rsvp-form fieldset{display:flex;gap:24px;margin:0;padding:0;border:0}
+.rsvp-form fieldset{display:grid;grid-template-columns:1fr 1fr;gap:12px 24px;margin:0;padding:0;border:0}
+.rsvp-form fieldset legend{grid-column:1 / -1;margin-bottom:2px}
 .rsvp-form fieldset label{display:flex;align-items:center;gap:8px;color:#b8aa9c;font-size:11px;font-weight:400;letter-spacing:.02em;text-transform:none}
-.rsvp-form input[type=radio]{accent-color:#b6a07c}
+.rsvp-form input[type=radio]{width:17px;height:17px;margin:0;accent-color:#b6a07c}
 .rsvp-submit{justify-self:start;margin-top:8px;padding:13px 21px;border:1px solid #b6a07c88;border-radius:0;background:#b6a07c;color:#211c18;cursor:pointer;font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}.rsvp-submit span{margin-left:14px;font-size:16px}
 .rsvp-note{color:#a99888;font-size:10px;letter-spacing:.04em}
 @media(max-width:720px){.rsvp-section{padding:70px 18px 85px}.rsvp-card{display:block}.rsvp-art{min-height:290px}.rsvp-art img{left:4%;width:92%;height:112%}.rsvp-content{padding:46px 30px 52px}.rsvp-card:before{inset:12px}.rsvp-grid{grid-template-columns:1fr;gap:17px}.rsvp-form fieldset{flex-wrap:wrap;gap:14px}}
+
+/* UPI blessings card */
+.gifts-section{padding-top:20px;padding-bottom:90px;background:#fcf9f4}
+.gift-card{display:grid;grid-template-columns:1fr 220px;align-items:center;gap:55px;max-width:920px;margin:auto;padding:48px 58px;background:#faf7f2;border:1px solid #c5a05966;box-shadow:0 18px 45px #5c1d2412}
+.gift-card h2{margin:0 0 12px;color:#93474d;font:400 clamp(32px,4vw,48px)/1.1 'Playfair Display',serif}
+.gift-card p:not(.eyebrow){max-width:510px;color:#6d665b;font:17px/1.8 'Playfair Display',serif}
+.gift-caption{margin-top:16px!important;color:#927650!important;font:600 10px/1.5 'Plus Jakarta Sans',sans-serif!important;letter-spacing:.13em;text-transform:uppercase}
+.upi-card{display:grid;justify-items:center;gap:13px;padding:17px;background:#fff;border:1px solid #c5a05966;box-shadow:0 10px 25px #5c1d2414}
+.upi-card img{display:block;width:185px;height:185px;object-fit:contain}
+.upi-card span{color:#93474d;font-size:10px;letter-spacing:.08em;text-align:center;text-transform:uppercase}
+.payment-methods{display:flex;align-items:center;gap:9px;margin-top:20px}
+.payment-pill{display:inline-flex;align-items:center;justify-content:center;min-width:58px;height:29px;padding:0 10px;border:1px solid #d8c5aa;border-radius:999px;background:#fff;color:#5d4037;font-size:10px;font-weight:700;letter-spacing:.02em}
+.payment-logo{display:block;width:auto;max-width:76px;height:18px;object-fit:contain}.upi-logo{max-width:58px;height:21px}
+.gift-form{display:grid;gap:14px;max-width:430px;margin-top:28px}.gift-form label{color:#927650;font-size:10px;font-weight:700;letter-spacing:.13em;text-transform:uppercase}.gift-form select,.gift-form input{display:block;width:100%;margin-top:7px;padding:11px 0;border:0;border-bottom:1px solid #c5a05988;background:transparent;color:#5d4037;font:14px 'Plus Jakarta Sans',sans-serif;outline:0}.gift-form select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,#927650 50%),linear-gradient(135deg,#927650 50%,transparent 50%);background-position:calc(100% - 7px) 55%,100% 55%;background-size:5px 5px,5px 5px;background-repeat:no-repeat}.gift-form select option{background:#faf7f2;color:#5d4037}.gift-details{display:grid;gap:12px;padding-top:4px}.gift-details input[type=file]{padding:9px 0;color:#6d665b;font-size:12px}.gift-details small{color:#927650;font-size:10px;letter-spacing:.04em}
+.gift-form fieldset{margin:0;padding:0;border:0}.gift-form legend{margin-bottom:10px;color:#927650;font-size:10px;font-weight:700;letter-spacing:.13em;text-transform:uppercase}.gift-choice{display:flex;flex-wrap:wrap;gap:9px}.gift-pill{padding:10px 15px;border:1px solid #c5a05988;border-radius:999px;background:#fff;color:#6d665b;cursor:pointer;font-size:11px;font-weight:600;letter-spacing:.02em}.gift-pill.active{border-color:#93474d;background:#93474d;color:#fff}.gift-submit{justify-self:start;margin-top:5px;padding:12px 17px;border:0;background:#93474d;color:#fff;cursor:pointer;font-size:10px;font-weight:700;letter-spacing:.13em;text-transform:uppercase}.gift-submit span{margin-left:12px;font-size:15px}
+.rsvp-gift-fields{margin-top:4px!important;padding:15px 16px 16px!important;border:1px solid #b6a07c55!important;background:#2a211c}.rsvp-gift-fields legend{margin-bottom:13px}.rsvp-gift-fields .gift-choice{grid-column:1 / -1}.rsvp-gift-details{padding-top:0}.rsvp-gift-details input[type=file]{padding:9px 0;color:#b8aa9c;font-size:12px}.rsvp-gift-details small{color:#b8aa9c;font-size:10px;letter-spacing:.04em}
+.rsvp-gift-details .gift-qr-note{display:grid;gap:7px;padding:13px 15px;border-left:3px solid #c5a059;background:#fff;color:#5d4037;font-size:11px;line-height:1.6;letter-spacing:.01em;box-shadow:0 7px 18px #0002}.rsvp-gift-details .gift-qr-note em{color:#93474d;font:italic 14px/1.4 'Playfair Display',serif}.rsvp-gift-fields .gift-pill{min-width:145px;padding:12px 17px;border-radius:4px;border-color:#b6a07c88;background:#211c18;color:#d8c3a4;box-shadow:inset 0 0 0 1px #b6a07c12}.rsvp-gift-fields .gift-pill:hover,.rsvp-gift-fields .gift-pill.active{border-color:#d4b77f;background:#b6a07c;color:#211c18}
+.rsvp-form{grid-template-columns:1fr 1fr;column-gap:26px;row-gap:12px}.rsvp-span-2{grid-column:1 / -1}.rsvp-content{padding:52px 56px}.rsvp-art{min-height:560px}.rsvp-intro{margin-bottom:22px}.rsvp-form input:not([type=radio]),.rsvp-form select,.rsvp-form textarea{padding:9px 0}.rsvp-submit{margin-top:3px}
+.rsvp-submit:disabled{cursor:wait;opacity:.8}.rsvp-spinner{display:inline-block;width:12px;height:12px;margin-right:9px;border:2px solid #ffffff66;border-top-color:#fff;border-radius:50%;vertical-align:-2px;animation:rsvp-spin .7s linear infinite}@keyframes rsvp-spin{to{transform:rotate(360deg)}}.rsvp-toast{margin-top:14px;padding:11px 14px;border:1px solid #b6a07c66;background:#211c18;color:#f1e7dc;font-size:11px;line-height:1.5}
+@media(max-width:720px){.rsvp-form{grid-template-columns:1fr;column-gap:0}.rsvp-span-2{grid-column:auto}.rsvp-content{padding:40px 28px 46px}.rsvp-art{min-height:290px}}
+.payment-mark{display:inline-grid;place-items:center;width:17px;height:17px;margin-right:5px;border-radius:50%;font:700 10px/1 Arial,sans-serif;font-style:normal}
+.gpay-pill{color:#1769e0}.upi-pill{color:#6b3fa0}.phonepe-pill{color:#5f259f}
+.g-mark{color:#4285f4;background:#f1f5ff}.upi-mark{color:#6b3fa0;background:#f1eaff;font-size:9px}.phonepe-mark{color:#fff;background:#5f259f}
+@media(max-width:720px){.gifts-section{padding:20px 18px 70px}.gift-card{grid-template-columns:1fr;gap:26px;padding:34px 28px;text-align:center}.gift-card p:not(.eyebrow){margin-left:auto;margin-right:auto}.upi-card{width:220px;margin:auto}}
