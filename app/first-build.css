@@ -2301,3 +2301,28 @@ footer {
 footer strong {
   color: var(--charcoal)
 }
+
+/* RSVP panel */
+.rsvp-section{padding-top:90px;padding-bottom:110px;background:#f6f3ee}
+.rsvp-card{position:relative;display:grid;grid-template-columns:minmax(220px,.78fr) minmax(0,1.22fr);max-width:1040px;margin:auto;overflow:hidden;background:linear-gradient(135deg,#211c18,#30251f);box-shadow:0 24px 70px #5c1d2430;border:1px solid #b6a07c55}
+.rsvp-card:before{content:'';position:absolute;inset:18px;border:1px solid #b6a07c44;pointer-events:none;z-index:1}
+.rsvp-art{position:relative;min-height:640px;background:linear-gradient(180deg,#eee2d2 0%,#d6c2ae 100%);overflow:hidden}
+.rsvp-art:after{content:'B  &  D';position:absolute;left:28px;bottom:24px;color:#5d403766;font:16px 'Playfair Display',serif;letter-spacing:.18em}
+.rsvp-art img{position:absolute;bottom:-2%;left:-24%;width:145%;height:92%;object-fit:contain;object-position:center bottom;filter:saturate(.82) sepia(.08)}
+.rsvp-content{position:relative;z-index:2;padding:62px 64px;color:#e8dfd3}
+.rsvp-content h2{margin:0 0 12px;color:#f1e7dc;font:400 clamp(34px,4vw,52px)/1.1 'Playfair Display',serif;letter-spacing:-.035em}
+.rsvp-intro{max-width:440px;margin:0 0 30px;color:#b8aa9c;font:16px/1.8 'Playfair Display',serif}
+.rsvp-form{display:grid;gap:17px}
+.rsvp-form label,.rsvp-form legend{color:#d8c3a4;font-size:10px;font-weight:600;letter-spacing:.15em;text-transform:uppercase}
+.rsvp-form input:not([type=radio]),.rsvp-form select,.rsvp-form textarea{display:block;width:100%;margin-top:7px;padding:12px 0;border:0;border-bottom:1px solid #b6a07c66;border-radius:0;outline:0;background:transparent;color:#f1e7dc;font:15px/1.5 'Plus Jakarta Sans',sans-serif}
+.rsvp-form input::placeholder,.rsvp-form textarea::placeholder{color:#a99888}
+.rsvp-form select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,#b6a07c 50%),linear-gradient(135deg,#b6a07c 50%,transparent 50%);background-position:calc(100% - 7px) 55%,100% 55%;background-size:5px 5px,5px 5px;background-repeat:no-repeat}
+.rsvp-form select option{background:#211c18;color:#f1e7dc}
+.rsvp-form textarea{resize:vertical}
+.rsvp-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.rsvp-form fieldset{display:flex;gap:24px;margin:0;padding:0;border:0}
+.rsvp-form fieldset label{display:flex;align-items:center;gap:8px;color:#b8aa9c;font-size:11px;font-weight:400;letter-spacing:.02em;text-transform:none}
+.rsvp-form input[type=radio]{accent-color:#b6a07c}
+.rsvp-submit{justify-self:start;margin-top:8px;padding:13px 21px;border:1px solid #b6a07c88;border-radius:0;background:#b6a07c;color:#211c18;cursor:pointer;font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}.rsvp-submit span{margin-left:14px;font-size:16px}
+.rsvp-note{color:#a99888;font-size:10px;letter-spacing:.04em}
+@media(max-width:720px){.rsvp-section{padding:70px 18px 85px}.rsvp-card{display:block}.rsvp-art{min-height:290px}.rsvp-art img{left:4%;width:92%;height:112%}.rsvp-content{padding:46px 30px 52px}.rsvp-card:before{inset:12px}.rsvp-grid{grid-template-columns:1fr;gap:17px}.rsvp-form fieldset{flex-wrap:wrap;gap:14px}}
