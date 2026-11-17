@@ -14,14 +14,16 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Bijin & Devu — The Wedding Celebration",
     description: "Join Bijin and Devu as they celebrate their wedding on 07 February 2027.",
+    url: "https://www.bijindevuwedding.online",
+    siteName: "Bijin & Devu Wedding",
     type: "website",
-    images: [{ url: "/dreamy-watercolour-couple-portrait.png", width: 1086, height: 1448, alt: "Bijin and Devu, celebrating their wedding" }],
+    images: [{ url: "/wedding-share-preview.jpg", width: 1731, height: 909, alt: "Bijin and Devu, celebrating their wedding" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Bijin & Devu — The Wedding Celebration",
     description: "Join Bijin and Devu as they celebrate their wedding on 07 February 2027.",
-    images: ["/dreamy-watercolour-couple-portrait.png"],
+    images: ["/wedding-share-preview.jpg"],
   },
 };
 
